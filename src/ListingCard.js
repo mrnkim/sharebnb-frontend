@@ -1,20 +1,16 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 function ListingCard({ listing }) {
   const { image_url, title } = listing;
   return (
-    <div style={{ margin: "10px" }}>
-      <Card style={{ width: "40rem" }} className="m-auto">
+    <div style={{ margin: "5px" }}>
+      <Card style={{ width: "15rem" }} className="m-auto">
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
           <div>
             <Card.Img variant="top" src={image_url} alt={title}></Card.Img>
           </div>
-          <Button className="mt-3" variant="primary">
-            Check out details
-          </Button>
+          <Card.Title>{title}</Card.Title>
         </Card.Body>
       </Card>
     </div>

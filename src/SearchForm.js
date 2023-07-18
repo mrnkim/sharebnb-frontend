@@ -34,14 +34,14 @@ function SearchForm({ handleSearch }) {
       <Form.Group className="justify-content-center justify-content-lg-start gx-0">
         <div className="d-flex align-items-center col-10 justify-content-center ">
           <input
-            className="form-control form-control-lg me-2"
+            className="form-control form-control-sm me-2"
             name="q"
-            placeholder="Enter search term.."
+            placeholder="Search"
             value={searchTerm}
             onChange={handleChange}
           />
-          <button type="submit" className="btn btn-lg btn-primary">
-            Submit
+          <button type="submit" className="btn btn-sm btn-primary">
+            <i className="bi bi-search"></i>
           </button>
         </div>
       </Form.Group>

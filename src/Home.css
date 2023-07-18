@@ -21,3 +21,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  h1 {
+    margin: 3rem;
+  }
+
+
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+
+}

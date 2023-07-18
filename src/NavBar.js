@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Button } from "react-bootstrap";
+import SearchForm from "./SearchForm";
 
 import "./Navbar.css";
 
@@ -15,7 +16,7 @@ import "./Navbar.css";
  *
  * Renders links to home, companies, and jobs
  */
-//TODO: see if we can make NavLink active
+
 function NavBar({ handleLogout, handleSearch }) {
   const user = useContext(userContext);
 
@@ -23,10 +24,12 @@ function NavBar({ handleLogout, handleSearch }) {
     return (
       <Navbar bg="light" expand="lg" variant="light">
         <Container>
-          <NavLink className="nav-link" to="/listings/create">
+          <NavLink className="nav-link no-wrap" to="/listings/create">
             Create Listing
           </NavLink>
-          <NavLink className="nav-link" to="/" onClick={handleLogout}>
+        </Container>
+        <Container>
+          <NavLink className="nav-link no-wrap" to="/" onClick={handleLogout}>
             Log out
           </NavLink>
         </Container>
@@ -38,10 +41,12 @@ function NavBar({ handleLogout, handleSearch }) {
     return (
       <Navbar bg="light" expand="lg" variant="light">
         <Container>
-          <NavLink className="nav-link" to="/login">
+          <NavLink className="nav-link no-wrap" to="/login">
             Login
           </NavLink>
-          <NavLink className="nav-link" to="/signup">
+        </Container>
+        <Container>
+          <NavLink className="nav-link no-wrap" to="/signup">
             Sign Up
           </NavLink>
         </Container>
@@ -59,6 +64,8 @@ function NavBar({ handleLogout, handleSearch }) {
         >
           ShareBnB
         </Navbar.Brand>
+        <SearchForm handleSearch={handleSearch} />
+
         {user ? loggedInNav() : loggedOutNav()}
       </Container>
     </Navbar>

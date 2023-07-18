@@ -25,10 +25,10 @@ function Home({ listings, handleSearch }) {
   return (
     <div className="background">
       <div>
-        <SearchForm handleSearch={handleSearch} />
-        <h1 className="displayText">Find Your Dream In Nature</h1>
+        {/* <SearchForm handleSearch={handleSearch} /> */}
+        <h1 className="displayText">Find Your Dream Space In Nature 🌲</h1>
       </div>
-      <div>
+      <div className="listings">
         {listings &&
           listings.map((l) => (
             <Link to={`/listings/${l.id}`}>
