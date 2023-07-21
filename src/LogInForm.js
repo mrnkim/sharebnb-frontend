@@ -31,6 +31,7 @@ function LogInForm({ handleLogIn }) {
       username: "",
       password: "",
     });
+    navigate("/");
   }
 
   async function testLogin(evt) {
