@@ -55,19 +55,18 @@ function NavBar({ handleLogout, handleSearch }) {
   }
 
   return (
-    <Navbar bg="light" expand="lg" variant="light">
-      <Container>
-        <Navbar.Brand
-          className="navbar-brand"
-          href="/"
-          onClick={() => handleSearch()}
-        >
-          ShareBnB
-        </Navbar.Brand>
-        <SearchForm handleSearch={handleSearch} />
-
-        {user ? loggedInNav() : loggedOutNav()}
-      </Container>
+    <Navbar bg="light" expand="lg" variant="light" className="px-4">
+      <Navbar.Brand
+        className="navbar-brand"
+        href="/"
+        onClick={() => handleSearch()}
+      >
+        ShareBnB
+      </Navbar.Brand>
+      <div className="search-form-container">
+        <SearchForm className="search-form" handleSearch={handleSearch} />
+      </div>
+      {user ? loggedInNav() : loggedOutNav()}
     </Navbar>
   );
 }

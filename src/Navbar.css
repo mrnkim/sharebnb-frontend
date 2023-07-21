@@ -11,3 +11,14 @@
 .no-wrap {
   white-space: nowrap;
 }
+
+.search-form-container {
+  display: flex;
+  justify-content:center;
+  width: 100%;
+}
+
+.input-width {
+  width: 100%;
+}
+

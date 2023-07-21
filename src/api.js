@@ -50,11 +50,10 @@ class ShareBnBApi {
 
   /** Get listings (filtered by name if not undefined) */
   //TODO: add filtering route in backend
-
+   
   static async getListings(name) {
-    console.log("🚀 > ShareBnBApi > getListings > name=", { q: name });
     let res = await this.request("listings", { q: name });
-    console.log("RES", res)
+    console.log("RES", res);
     return res.data.listings;
   }
 

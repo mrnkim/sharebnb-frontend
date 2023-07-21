@@ -34,6 +34,7 @@ function App() {
 
   async function addListing(formData) {
     const listing = await ShareBnBApi.postListing(formData);
+
     setListings((listings) => ({
       listing: [...listings.listing, listing],
       isLoaded: true,
@@ -76,7 +77,6 @@ function App() {
       isLoaded: true,
     });
   }
-
 
   if (!listings.isLoaded) return <i>Loading...</i>;
 

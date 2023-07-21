@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form, Row } from "react-bootstrap";
 
 /** Search widget.
@@ -31,20 +31,20 @@ function SearchForm({ handleSearch }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group className="justify-content-center justify-content-lg-start gx-0">
-        <div className="d-flex align-items-center col-10 justify-content-center ">
-          <input
-            className="form-control form-control-sm me-2"
-            name="q"
+      <div className="d-flex align-items-center justify-content-center">
+        <Form.Group className="justify-content-center">
+          <Form.Control
+            type="text"
+            name="search"
             placeholder="Search"
             value={searchTerm}
             onChange={handleChange}
           />
-          <button type="submit" className="btn btn-sm btn-primary">
-            <i className="bi bi-search"></i>
-          </button>
-        </div>
-      </Form.Group>
+        </Form.Group>
+        <Button type="submit" className="btn btn-sm btn-dark m-1">
+          <i className="bi bi-search"></i>
+        </Button>
+      </div>
     </Form>
   );
 }

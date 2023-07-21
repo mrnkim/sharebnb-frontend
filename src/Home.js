@@ -25,13 +25,16 @@ function Home({ listings, handleSearch }) {
   return (
     <div className="background">
       <div>
-        {/* <SearchForm handleSearch={handleSearch} /> */}
         <h1 className="displayText">Find Your Dream Space In Nature 🌲</h1>
       </div>
       <div className="listings">
         {listings &&
           listings.map((l) => (
-            <Link to={`/listings/${l.id}`}>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              key={l.id}
+              to={`/listings/${l.id}`}
+            >
               {" "}
               <ListingCard key={l.id} listing={l} />
             </Link>

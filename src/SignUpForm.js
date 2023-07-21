@@ -39,78 +39,76 @@ function SignupForm({ handleSignUp }) {
   }
 
   return (
-    <div className="SignupForm">
-      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-        <h2 className="mb-3">Sign Up</h2>
-        <div className="card">
-          <div className="card-body">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label className="form-label">Username</label>
-                <input
-                  name="username"
-                  className="form-control"
-                  value={formData.username}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-              </div>
+    <div className="SignupForm col-md-6 col-lg-4 offset-md-3 offset-lg-4 p-4">
+      <h2 className="mb-3">Sign Up</h2>
+      <div className="card">
+        <div className="card-body">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                name="username"
+                className="form-control"
+                value={formData.username}
+                onChange={handleChange}
+                placeholder="Username"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Password"
+              />
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">First name</label>
-                <input
-                  name="firstName"
-                  className="form-control"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Last name</label>
-                <input
-                  name="lastName"
-                  className="form-control"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Are You Host?</label>
-                <select
-                  name="isHost"
-                  className="form-control"
-                  value={formData.isHost}
-                  onChange={handleChange}
-                >
-                  <option value={true}>Yes</option>
-                  <option value={false}>No</option>
-                </select>
-              </div>
+            <div className="mb-3">
+              <input
+                name="firstName"
+                className="form-control"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First Name"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                name="lastName"
+                className="form-control"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last Name"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Are You Host?</label>
+              <select
+                name="isHost"
+                className="form-control"
+                value={formData.isHost}
+                onChange={handleChange}
+              >
+                <option value={true}>Yes</option>
+                <option value={false}>No</option>
+              </select>
+            </div>
 
-              <div className="d-grid">
-                <button className="btn btn-primary">Submit</button>
-              </div>
-            </form>
-          </div>
+            <div className="d-grid">
+              <button className="btn btn-dark">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
