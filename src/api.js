@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5001";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5001";
 
 /** API Class.
  *
@@ -50,7 +50,7 @@ class ShareBnBApi {
 
   /** Get listings (filtered by name if not undefined) */
   //TODO: add filtering route in backend
-   
+
   static async getListings(name) {
     let res = await this.request("listings", { q: name });
     console.log("RES", res);
