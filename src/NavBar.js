@@ -29,7 +29,11 @@ function NavBar({ handleLogout, handleSearch }) {
           </NavLink>
         </Container>
         <Container>
-          <NavLink className="nav-link no-wrap" to="/" onClick={handleLogout}>
+          <NavLink
+            className="nav-link no-wrap log-out"
+            to="/"
+            onClick={handleLogout}
+          >
             Log out
           </NavLink>
         </Container>

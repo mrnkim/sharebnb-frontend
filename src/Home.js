@@ -12,15 +12,6 @@ import "./Home.css";
  */
 
 function Home({ listings, handleSearch }) {
-  //   const user = useContext(userContext);
-  //   const navigate = useNavigate();
-
-  //   function redirectToLogIn() {
-  //     navigate("/login");
-  //   }
-  //   function redirectToSignUp() {
-  //     navigate("/signup");
-  //   }
 
   return (
     <div className="background">

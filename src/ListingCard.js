@@ -7,7 +7,7 @@ function ListingCard({ listing }) {
 
   return (
     <div style={{ margin: "5px" }}>
-      <Card style={{ width: "20rem" }} className="m-auto">
+      <Card style={{ width: "20rem", padding: "0rem" }} className="m-auto">
         <Card.Body>
           <div>
             <Card.Img
@@ -17,8 +17,8 @@ function ListingCard({ listing }) {
               alt={title}
             ></Card.Img>
           </div>
-          <Card.Title className="mt-2">{title}</Card.Title>
-          <Card.Text>
+          <Card.Title className="mt-2 text-center">{title}</Card.Title>
+          <Card.Text className="text-center">
             Stay here at ${listing.price_per_night} per night
           </Card.Text>
         </Card.Body>
